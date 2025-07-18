@@ -1,0 +1,38 @@
+//This program first takes the user’s age as input. Then, the if statement checks if the age is greater than or equal to 18 (the voting age). If the condition is True, the program displays a message indicating eligibility. If the condition is False (age less than 18), the else block executes, and the program displays a message stating ineligibility.//
+
+age = int(input("Enter your age: "))
+
+if age >= 18:
+  print("You are eligible to vote.")
+else:
+  print("You are not eligible to vote yet.")
+
+//This program takes the purchase amount as input. It then uses a series of conditional statements: * The first if statement checks if the purchase amount is greater than or equal to 1000. If so, it applies a 10% discount. * The elif statement checks if the amount is between 500 and 1000 (excluding 1000). If so, it applies a 5% discount. * If neither of the above conditions is met, the else block executes, and no discount is applied. * Finally, the program calculates the final price by applying the discount and displays it to the user.//
+
+purchase_amount = float(input("Enter your purchase amount: "))
+
+if purchase_amount >= 1000:
+  discount = 0.1  # 10% discount
+elif purchase_amount >= 500:
+  discount = 0.05  # 5% discount
+else:
+  discount = 0  # No discount
+
+final_price = purchase_amount * (1 - discount)
+print("Final price after discount: $" + str(final_price))
+
+//This program takes the student’s score as input. It then uses a chain of if statements to check for specific score ranges and assigns the corresponding letter grade.//
+
+score = int(input("Enter your score: "))
+
+if score >= 90:
+  grade = "A"
+elif score >= 80:
+  grade = "B"
+elif score >= 70:
+  grade = "C"
+else:
+  grade = "F"
+
+print("Your grade is:", grade)
+
