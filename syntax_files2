@@ -1,0 +1,46 @@
+//In this example, the day variable is matched against specific weekdays. Each matching case executes its corresponding code block, printing a message based on the user’s input. Notice how the | (pipe) operator allows matching against multiple values in a single case.//
+
+day = input("Enter a day of the week (Monday-Sunday): ").lower()
+
+match day:
+    case "monday":
+        print("Ugh, Mondays...")
+    case "tuesday":
+        print("Just another workday...")
+    case "wednesday":
+        print("Hump day!")
+    case "thursday":
+        print("Almost there...")
+    case "friday":
+        print("TGIF!")
+    case "saturday" | "sunday":  # Match multiple values with pipe (|)
+        print("Weekend vibes!")
+    case _:
+        print("Invalid day entered.")
+
+ //Here, the value variable is matched against data types. The int() and str() functions act as patterns, checking if the value is an integer or a string.//
+
+ value = input("Enter a value (number or string): ")
+
+match value:
+    case int():
+        print("You entered an integer:", value)
+    case str():
+        print("You entered a string:", value)
+    case _:
+        print("Invalid data type entered.")
+
+//Here’s an example demonstrating a guard within a case://
+
+age = int(input("Enter your age: "))
+
+match age:
+    case 18 | 19:  # Match multiple values with pipe (|)
+        if age >= 18 and has_id(user):  # Guard using a function call
+            print("You are eligible to vote.")
+        else:
+            print("You need a valid ID to vote.")
+    case _:
+        print("You are not yet eligible to vote.")
+        
+        
