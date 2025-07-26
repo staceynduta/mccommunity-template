@@ -1,0 +1,35 @@
+#Understanding Modules and Packages Modules A module is a Python file (.py) containing functions, classes, and variables. You can import the functionalities of a module into your program for use. Think of a module as a single box containing related pieces of code. For example, if you’re working on a project related to math operations, you can create a math module to store functions like addition, subtraction, etc. Each module focuses on specific tasks, making your code easier to understand and maintain. Module Creation (math_functions.py):
+# math_functions.py (Module)
+def add(x, y):
+  """Returns the sum of two numbers."""
+  return x + y
+
+def subtract(x, y):
+  """Returns the difference of two numbers."""
+  return x - y
+  #In this file, we define two functions add() and subtract() inside the math_functions module. The add() function takes two parameters x and y, and it returns their sum using the + operator. The subtract() function also takes two parameters x and y, and it returns their difference using the - operator.
+  # main.py (Program)
+import math_functions
+
+result = math_functions.add(5, 3)
+print(result)  # Output: 8
+
+#Consider a simplified example
+library_system/         <-- Package directory
+    __init__.py         <-- Indicates it's a package
+    books.py            <-- Module within the package
+    members.py          <-- Another module
+
+# Import modules from the package
+from library_system import books
+from library_system import members
+
+# Use functions/classes from the imported modules
+books.add_book('Python Programming', 'John Doe')
+members.add_member('Alice')
+
+import os  # Module for interacting with the operating system
+
+# Get the current working directory
+cwd = os.getcwd()
+print(cwd)
